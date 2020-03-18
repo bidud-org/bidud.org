@@ -24,4 +24,6 @@ window.addEventListener('DOMContentLoaded', () => {
     track.src = $.vtt(cues)
     player.appendChild(track)
     player.textTracks[0].mode = 'showing'
+
+    player.play()
 })
