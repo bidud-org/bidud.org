@@ -1,12 +1,13 @@
-import { vid } from './vid'
+import { $ } from './vid'
 
 window.addEventListener('DOMContentLoaded', () => {
-    const f2t = vid.f2t
-    const vtt = vid.vtt
-    const debounce = vid.debounce
+    const i = $.rndInt()
+    const vid = $.getVid(i)
+    const vtt = $.vtt
+    const debounce = $.debounce
 
     function inputs(
-        cues: vid.cue[],
+        cues: $.cue[],
         player: HTMLMediaElement,
         track: HTMLTrackElement
     ) {
@@ -17,9 +18,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 player.currentTime = cue.s - 0.5
                 cue.t = input.value
                 track.src = vtt(cues)
-
-                console.log(input.value)
-                console.log(player.currentTime)
             }, 500)
 
             const input = document.createElement('input')
@@ -52,7 +50,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     const player = document.getElementById('player') as HTMLMediaElement
-    player.src = vid.vid.src
+    player.src = vid.src
 
     const track = document.createElement('track')
     track.kind = 'subtitles'
@@ -61,7 +59,13 @@ window.addEventListener('DOMContentLoaded', () => {
     player.textTracks[0].mode = 'showing'
 
     const cues = document.getElementById('cues')
-    inputs(vid.vid.cues, player, track).forEach(cue => cues?.append(cue))
+    inputs(vid.cues, player, track).forEach(cue => cues?.append(cue))
+
+    const h = document.createElement('input')
+    h.type = 'hidden'
+    h.name = 'i'
+    h.value = `${i}`
+    cues.append(h)
 
     const submit = document.createElement('input')
     submit.type = 'submit'

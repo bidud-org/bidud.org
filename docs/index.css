@@ -1,5 +1,9 @@
 @import 'common.css';
 
+.editor {
+    width: 30em;
+}
+
 input {
     transition: background-color 1s;
     border: 1px solid pink;
