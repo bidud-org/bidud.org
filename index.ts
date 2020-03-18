@@ -65,5 +65,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const submit = document.createElement('input')
     submit.type = 'submit'
+    submit.value = 'View'
     cues?.append(submit)
 })

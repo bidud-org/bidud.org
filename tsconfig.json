@@ -3,8 +3,8 @@
     "module": "CommonJS",
     "moduleResolution": "node",
     "target": "ES5",
-    // "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "outDir": "docs",
     "lib": [
       "ES6",
       "DOM"
