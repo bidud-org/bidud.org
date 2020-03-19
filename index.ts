@@ -32,6 +32,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const submit = document.createElement('input')
     submit.type = 'submit'
-    submit.value = 'Generate a movie'
+    submit.value = 'Make a Movie'
     cues?.append(submit)
 })
