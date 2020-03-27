@@ -54,7 +54,7 @@ function f2t(seconds: number) {
 
 function vtt(cues: data.cue[]) {
     const sub = 'WEBVTT\n\n' + cues.map(
-        c => `${f2t(c.s)} --> ${f2t(c.e)}\n${c.t}`
+        c => `${f2t(c.s)} --> ${f2t(c.s + c.l)}\n${c.t}`
     ).join('\n\n')
 
     console.log(sub)
