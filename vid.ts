@@ -59,40 +59,4 @@ export namespace $ {
             ]
         }
     ]
-
-    function f2t(seconds: number) {
-        const min = Math.floor(seconds / 60)
-        const sec = (seconds % 60).toFixed(3)
-
-        return ('00' + min).slice(-2) + ':' + ('00' + sec).slice(-6)
-    }
-
-    export function rndInt() {
-        return Math.floor(Math.random() * vids.length);
-    }
-
-    export function getVid(i) {
-        return vids[i]
-    }
-
-
-    export function vtt(cues: cue[]) {
-        const sub = 'WEBVTT\n\n' + cues.map(
-            c => `${f2t(c.s)} --> ${f2t(c.e)}\n${c.t}`
-        ).join('\n\n')
-
-        return URL.createObjectURL(new Blob([sub], { type: 'text/vtt' }))
-    }
-
-    export function debounce<F extends (...args: any[]) => void>(
-        f: F
-        , timeout: number): F {
-        let to: any
-        return ((...args: any[]) => {
-            clearTimeout(to);
-            to = setTimeout(() => {
-                f(...args)
-            }, timeout)
-        }) as any
-    }
 }

@@ -9,7 +9,7 @@ html, body{
     margin: 0;
 }
 
-body,input[type='text']{
+body,input[type='text'],textarea{
     font-family: 'Baloo 2', cursive;
     /* font-family: 'Noto Sans', sans-serif; */
     color: #333;

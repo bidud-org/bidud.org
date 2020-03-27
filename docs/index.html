@@ -13,14 +13,19 @@
     <link rel="icon" type="image/jpg" href="/favicon.png">
 
     <link rel="stylesheet" href="index.css">
-    <script src="index.b.js"></script>
 </head>
 
 <body>
     <div id='app'>
         <div id="form" class="white-box">
             <h2>Write your story, make a movie.</h2>
-            <form id='cues' action="view.html"></form>
+            <form id='cues' action="view.html">
+                <div>
+                    <textarea autofocus dir="auto" name="txt" maxlength="100" placeholder="One sentence per line">
+                    </textarea>
+                </div>
+                <input type="submit" value='Make a movie'>
+            </form>
         </div>
     </div>
 </body>

@@ -7,7 +7,13 @@ module.exports = {
         filename: '[name].b.js',
         path: __dirname + '/docs'
     },
-    mode: 'production',
+    mode: 'development',
+    resolve: {
+        alias: {
+            sbd: 'sbd/dist/sbd.min.js'
+        }
+    },
+
     module: {
         rules: [
             {

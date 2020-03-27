@@ -2,12 +2,8 @@
   "compilerOptions": {
     "module": "CommonJS",
     "moduleResolution": "node",
-    "target": "ES5",
-    "allowSyntheticDefaultImports": true,
+    "target": "ESNext",
+    // "allowSyntheticDefaultImports": true,
     "outDir": "docs",
-    "lib": [
-      "ES6",
-      "DOM"
-    ],
   },
 }
