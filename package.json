@@ -30,7 +30,6 @@
     "run:bsync": "browser-sync start --config bs-config.js",
     "run": "run-p run:*",
     "dev": "run-p watch:* run:*",
-    "bin": "pkg . --out-path bin --options max_old_space_size=4096",
-    "pkg": "run-s build:* bin"
+    "surge": "surge docs/"
   }
 }
