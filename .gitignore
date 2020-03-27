@@ -5,3 +5,4 @@ dev
 *.js
 
 !webpack.config.js
+!bs-config.js
