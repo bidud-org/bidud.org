@@ -7,7 +7,7 @@ export namespace data {
         {
             src: 'vids/01-02.mp4',
             cues: [
-                { s: 3, l: 2, t: '' },
+                { s: 3, l: 3, t: '' },
                 { s: 8, l: 4, t: '' },
             ]
         },
@@ -15,7 +15,7 @@ export namespace data {
             src: 'vids/01-03.mp4',
             cues: [
                 { s: 1, l: 3, t: '' },
-                { s: 8, l: 2, t: '' },
+                { s: 8, l: 3, t: '' },
                 { s: 14, l: 4, t: '' },
             ]
         },
@@ -24,7 +24,7 @@ export namespace data {
             cues: [
                 { s: 1, l: 3, t: '' },
                 { s: 7, l: 3, t: '' },
-                { s: 14, l: 2, t: '' },
+                { s: 14, l: 3, t: '' },
                 { s: 20, l: 4, t: '' },
             ]
         },
@@ -34,7 +34,7 @@ export namespace data {
                 { s: 1, l: 3, t: '' },
                 { s: 5, l: 3, t: '' },
                 { s: 12, l: 3, t: '' },
-                { s: 19, l: 2, t: '' },
+                { s: 19, l: 3, t: '' },
                 { s: 24, l: 4, t: '' },
             ]
         },
