@@ -1,6 +1,5 @@
 module.exports = {
     entry: {
-        index: './docs/index.js',
         view: './docs/view.js',
     },
     output: {
@@ -8,11 +7,6 @@ module.exports = {
         path: __dirname + '/docs'
     },
     mode: 'development',
-    resolve: {
-        alias: {
-            sbd: 'sbd/dist/sbd.min.js'
-        }
-    },
 
     module: {
         rules: [

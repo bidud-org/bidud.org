@@ -2,44 +2,13 @@ import * as queryString from 'query-string'
 import './view.css'
 import { data } from './vid'
 
-// export function rndInt() {
-//     return Math.floor(Math.random() * vids.length);
-// }
-
-// export function getVid(i) {
-//     return vids[i]
-// }
-
-
-// export function debounce<F extends (...args: any[]) => void>(
-//     f: F
-//     , timeout: number): F {
-//     let to: any
-//     return ((...args: any[]) => {
-//         clearTimeout(to);
-//         to = setTimeout(() => {
-//             f(...args)
-//         }, timeout)
-//     }) as any
-// }
-
-function shuffle(a) {
-    for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
-    }
-    return a;
-}
 
 function sents(txt) {
     return txt.split('\n')
 }
 
 function getVid(sentences: string[]) {
-    const vids = shuffle(data.vids)
-
-
-    for (const vid of vids) {
+    for (const vid of data.vids) {
         if (vid.cues.length === sentences.length)
             return vid
     }
